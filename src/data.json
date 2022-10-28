@@ -1,0 +1,36 @@
+[
+    {
+        "question": "Can browsers read JSX files?",
+        "options": [
+            {
+                "answer": "Yes",
+                "correctAnswer": false
+            },{
+                "answer": "No",
+                "correctAnswer": true
+            }
+        ]
+    },{
+        "question": "Why is Class written as className in React?",
+        "options": [
+            {
+                "answer": "Because it fits with React's naming scheme.",
+                "correctAnswer": false
+            },{
+                "answer": "It is a reserved keyword in JavaScript",
+                "correctAnswer": true
+            }
+        ]
+    },{
+        "question": "Describe data flow in React.",
+        "options": [
+            {
+                "answer": "It is unidirectional, from the parent to the children.",
+                "correctAnswer": true
+            },{
+                "answer": "It is unidirectional from the children to the parent.",
+                "correctAnswer": false
+            }
+        ]
+    }
+]

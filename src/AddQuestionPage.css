@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Text'
+}
+#add-question-page {
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 3% 0 0;
+    background: #2e2e2e;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: .6rem .6rem .8rem rgb(46, 46, 46);
+    animation: pop-up .3s linear 1 forwards;
+}
+@keyframes pop-up {
+    from {
+        translate: .6rem .6rem;
+        box-shadow: none;
+    }
+}
+.form-input{
+    border: 2px solid #5a5a5a;
+    border-radius: .3rem;
+    padding: .25rem;
+}
+#options-amount-input {
+    width: 3.5rem;
+}
+button {
+    border: none;
+    border-radius: .3rem;
+    font-weight: 700;
+    padding: .5rem 1.25rem;
+    cursor: pointer;
+    transition: .2s;
+}
+button:hover {
+    scale: 1.05;
+    translate: -.1rem -.1rem;
+    box-shadow: .8rem .8rem .5rem rgba(0, 0, 0, 0.2);
+}

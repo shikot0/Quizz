@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+  box-sizing: border-box;
+}
+
+
+main {
+  background: black;
+  transition: .3s;
+}
+.navbar-visible > section {
+  translate: 0 -6%;
+}
+nav {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* background: rgba(66, 66, 66, 0.6); */
+  background: rgb(35, 35, 35);
+  border-radius: 0 2rem 2rem 0;
+  padding: 7.5% 4% 0 5%;
+  min-width: 14rem;
+  width: 40%;
+  max-width: 21rem;
+  z-index: 1;
+  translate: -100vw 0;
+}
+.navbar-visible nav { 
+  translate: none;
+}
+.nav-link {
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(45, 45, 218);
+}
+.nav-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border: none;
+  background: transparent;
+  filter: invert(1);
+  cursor: pointer;
+}
+.nav-button:hover {
+  scale: 1.05;
+}
+#quiz-page {
+  min-height: 100vh;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  justify-items: center;
+  overflow-x: hidden;
+  text-align: center;
+}
+.slide {
+  width: 100%;
+  padding: 2%;
+  transition: cubic-bezier(0.68,-0.55, 0.33, 1.89) .8s .2s;
+}
+.quiz-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8%;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right,#262626,#242424b3);
+  box-shadow: .5rem .5rem 1.5rem rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 0 5%;
+}
+.question {
+  font-size: 2rem;
+}
+.answers-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  justify-content: center;
+  /* justify-items: center; */
+  width: 100%;
+  gap: 5%;
+}
+.answer {
+  border-radius: .5rem;
+  border: none;
+  padding: .8rem 2.5rem;
+  font-weight: 700;
+  background: rgba(85, 85, 255, 0.4);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: .2s;
+}
+.answer:hover {
+  scale: 1.025;
+  background: rgba(85, 85, 255, 0.65);
+  box-shadow: .35rem .35rem .75rem rgba(85, 85, 255, 0.5);
+}
+.answer:active {
+  scale: .975;
+}
+
+
+
+
+
+
+.alternate-theme main{
+  background: white;
+}
+.alternate-theme .quiz-item {
+  /* background: linear-gradient(to bottom right, orange, rgb(203, 132, 0)) */
+  background: rgb(239, 239, 239);
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+@media screen and (max-width: 500px) {
+  .slide {
+    padding: 5%;
+  }
+  .question {
+    font-size: 1.5rem;
+  }
+  .answer {
+    font-size: .85rem;
+  }
+}
