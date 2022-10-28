@@ -1,6 +1,6 @@
 import {useState, useContext} from 'react';
-import './AddQuestionPage.css';
-import QuestionsContext from './GlobalContext';
+import '../Styles/AddQuestionPage.css';
+import QuestionsContext from '../GlobalContext';
 
 function AddQuestionPage() {
     const {setQuestions} = useContext(QuestionsContext);

@@ -1,7 +1,7 @@
 import {useContext} from 'react';
-import QuestionsContext from './GlobalContext';
+import QuestionsContext from '../GlobalContext';
 import QuestionItem from './QuestionItem';
-import './QuestionListPage.css'
+import '../Styles/QuestionListPage.css';
 
 function QuestionListPage() {
     const {questions} = useContext(QuestionsContext);

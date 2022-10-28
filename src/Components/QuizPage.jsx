@@ -1,7 +1,7 @@
 import QuizItem from './QuizItem';
 import {useState, useEffect, useContext} from 'react';
-import './QuizPage.css';
-import QuestionsContext from './GlobalContext';
+import '../Styles/QuizPage.css';
+import QuestionsContext from '../GlobalContext';
 
 function QuizPage() {
     const {questions} = useContext(QuestionsContext)

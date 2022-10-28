@@ -1,13 +1,13 @@
 import {useContext, useEffect} from 'react';
 import {Route, Routes, Link} from 'react-router-dom';
-import QuizPage from './QuizPage';
-import QuestionListPage from './QuestionListPage';
-import AddQuestionPage from './AddQuestionPage';
+import QuizPage from './Components/QuizPage';
+import QuestionListPage from './Components/QuestionListPage';
+import AddQuestionPage from './Components/AddQuestionPage';
 import GlobalContext from './GlobalContext';
 
 function App() {
 
-  const {navBarIsVisible} = useContext(GlobalContext);
+  const {navBarIsVisible} = useContext(GlobalContext); 
 
   useEffect(() => {
     if(navBarIsVisible) {
@@ -24,7 +24,10 @@ function App() {
           <Link to="/" className="nav-link">Quiz</Link>
           <Link to="questions" className="nav-link">List of Questions</Link>
         </nav>
-        <button className="nav-button"><img src={`${process.env.PUBLIC_URL}/logo-menu.svg`} alt="" /></button>
+        <button className="nav-button">
+          <img src={`${process.env.PUBLIC_URL}/logo-menu.svg`} alt="nav-button" />
+          {/* <img src="./logo-menu" alt="logo" /> */}
+        </button>
         <Routes>
           <Route exact path="/" element={<QuizPage/>}/>
           <Route path="/questions" element={<QuestionListPage/>}/>

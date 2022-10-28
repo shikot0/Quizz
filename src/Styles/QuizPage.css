@@ -11,7 +11,7 @@ main {
   transition: .3s;
 }
 .navbar-visible > section {
-  translate: 0 -6%;
+  translate: 0 -3%;
 }
 nav {
   position: absolute;
