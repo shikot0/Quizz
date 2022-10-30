@@ -1,20 +1,25 @@
-import {useContext} from 'react';
-import QuestionsContext from '../GlobalContext';
 import QuestionItem from './QuestionItem';
+import {Link} from 'react-router-dom';
+import useQuestions from '../Utils/useQuestions';
+import Loader from './Loader';
 import '../Styles/QuestionListPage.css';
 
 function QuestionListPage() {
-    const {questions} = useContext(QuestionsContext);
+    const {questions} = useQuestions();
+
     return(
-        <section id="edit-questions-page">
+        <section id="question-list-page">
             <h2>Questions:</h2>
+            {!questions ? <Loader/> : null}
             <div className="question-items-grid">
-                {questions.map((questionData, index) => {
-                    return <QuestionItem key={index} questionData={questionData} number={index+1}/>
-                })}
-                <div className="question-item add-question-button">
+                {questions ? questions.map((questionData, index) => {
+                    return(
+                        <QuestionItem key={index} questionData={questionData} index={index}/>
+                    )
+                }): null}
+                <Link to="/add-question" className="question-item add-question-button">
                     <img src={`${process.env.PUBLIC_URL}/logo-add-item-section.svg`} alt="" />
-                </div>
+                </Link>
             </div>
         </section>
     )

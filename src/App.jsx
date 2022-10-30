@@ -3,20 +3,34 @@ import {Route, Routes, Link} from 'react-router-dom';
 import QuizPage from './Components/QuizPage';
 import QuestionListPage from './Components/QuestionListPage';
 import AddQuestionPage from './Components/AddQuestionPage';
+import EditQuestionPage from './Components/EditQuestionPage';
 import GlobalContext from './GlobalContext';
 
 function App() {
+  const {navBarIsVisible,setNavBarIsVisible} = useContext(GlobalContext); 
 
-  const {navBarIsVisible} = useContext(GlobalContext); 
+  if(navBarIsVisible) {
+    window.addEventListener('click', e => {
+      if(e.target !== document.querySelector('nav') && e.target !== document.querySelector('.nav-button')) {
+        setNavBarIsVisible(false)
+      }
+    })
+  }
 
   useEffect(() => {
+    const main = document.querySelector('main');
     if(navBarIsVisible) {
-      const main = document.querySelector('main');
       main.classList.add('navbar-visible')
+    }else {
+      main.classList.remove('navbar-visible')
     }
   }, [navBarIsVisible])
 
-  console.log(`${process.env.PUBLIC_URL}/logo-menu.svg`)
+
+  function handleTheme(e) {
+    document.querySelector('body').classList.toggle('alternate-theme')
+  }
+
   return (
     <>
       <main>
@@ -24,14 +38,17 @@ function App() {
           <Link to="/" className="nav-link">Quiz</Link>
           <Link to="questions" className="nav-link">List of Questions</Link>
         </nav>
-        <button className="nav-button">
-          <img src={`${process.env.PUBLIC_URL}/logo-menu.svg`} alt="nav-button" />
+        <button className="nav-button" onClick={() => setNavBarIsVisible(prev => !prev)}>
+          {/* <img src={`${process.env.PUBLIC_URL}/logo-menu.svg`} alt="menu-button" /> */}
           {/* <img src="./logo-menu" alt="logo" /> */}
+          Menu
         </button>
+        <button className="theme-button" onClick={handleTheme}>Change theme</button>
         <Routes>
           <Route exact path="/" element={<QuizPage/>}/>
           <Route path="/questions" element={<QuestionListPage/>}/>
           <Route path="/add-question" element={<AddQuestionPage/>}/>
+          <Route path="/edit-question/:id" element={<EditQuestionPage/>}/>
         </Routes>
       </main>
       </>

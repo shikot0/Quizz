@@ -1,36 +1,68 @@
-[
+{
+  "questions": [
     {
-        "question": "Can browsers read JSX files?",
-        "options": [
-            {
-                "answer": "Yes",
-                "correctAnswer": false
-            },{
-                "answer": "No",
-                "correctAnswer": true
-            }
-        ]
-    },{
-        "question": "Why is Class written as className in React?",
-        "options": [
-            {
-                "answer": "Because it fits with React's naming scheme.",
-                "correctAnswer": false
-            },{
-                "answer": "It is a reserved keyword in JavaScript",
-                "correctAnswer": true
-            }
-        ]
-    },{
-        "question": "Describe data flow in React.",
-        "options": [
-            {
-                "answer": "It is unidirectional, from the parent to the children.",
-                "correctAnswer": true
-            },{
-                "answer": "It is unidirectional from the children to the parent.",
-                "correctAnswer": false
-            }
-        ]
+      "id": 1,
+      "question": "Can browsers read JSX files?",
+      "options": [
+        {
+          "answer": "Yes",
+          "correctAnswer": false
+        },
+        {
+          "answer": "No",
+          "correctAnswer": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Why is Class written as className in React?",
+      "options": [
+        {
+          "answer": "Because it fits with React's naming scheme.",
+          "correctAnswer": false
+        },
+        {
+          "answer": "It is a reserved keyword in JavaScript",
+          "correctAnswer": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Describe data flow in React.",
+      "options": [
+        {
+          "answer": "It is unidirectional, from the parent to the children.",
+          "correctAnswer": true
+        },
+        {
+          "answer": "It is unidirectional from the children to the parent.",
+          "correctAnswer": false
+        }
+      ]
+    },
+    {
+      "question": "How would you delay an API call until a component has mounted?",
+      "options": [
+        {
+          "answer": "Place the API call in the useEffect hook with an empty dependency array as it's argument.",
+          "correctAnswer": true
+        },
+        {
+          "answer": "Place the API call in the useState hook at the top level of the document.",
+          "correctAnswer": false
+        },
+        {
+          "answer": "",
+          "correctAnswer": false
+        },
+        {
+          "answer": "",
+          "correctAnswer": false
+        }
+      ],
+      "id": 4
     }
-]
+  ]
+}

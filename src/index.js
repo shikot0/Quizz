@@ -13,5 +13,10 @@ root.render(
       </GlobalProvider>
     </HashRouter>
   </React.StrictMode>
+    // <HashRouter>
+    //   <GlobalProvider>
+    //     <App />
+    //   </GlobalProvider>
+    // </HashRouter>
 );
 
