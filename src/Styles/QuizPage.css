@@ -42,21 +42,26 @@ nav {
 }
 .nav-button {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 3%;
   left: 3%;
   z-index: 10;
+  width: 2.75rem;
+  height: 2.75rem;
   border: none;
-  background: #313131;
+  background: url(/public/logo-menu.svg),#313131;
   color: white;
   /* filter: invert(1); */
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: 600;
-  padding: .5rem .75rem;
+  padding: .1rem .1rem;
   border-radius: .5rem;
 }
 .navbar-visible .nav-button{
-  background: rgb(35, 35, 35);
+  background: url(/public/logo-menu.svg), rgb(35, 35, 35);
 }
 .nav-button:hover {
   scale: 1.05;
@@ -200,11 +205,11 @@ section {
   color: rgb(94, 94, 255);
 }
 .alternate-theme .nav-button {
-  background-color: rgb(220, 220, 220);
+  background: url(/public/logo-menu.svg), rgb(220, 220, 220);
   color: rgb(41, 41, 41);
 }
 .alternate-theme .navbar-visible .nav-button {
-  background: rgba(245, 245, 245, 0.7);
+  background: url(/public/logo-menu.svg), rgba(245, 245, 245, 0.7);
 }
 .alternate-theme .quiz-item {
   /* background: linear-gradient(to bottom right, orange, rgb(203, 132, 0)) */
@@ -214,6 +219,10 @@ section {
 
 
 @media screen and (max-width: 500px) {
+  .nav-button {
+    top: 1.5%;
+    left: 2.25%;
+  }
   .slide {
     padding: 3%;
   }

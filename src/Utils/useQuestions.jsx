@@ -54,7 +54,6 @@ const useQuestions = () => {
             newArr.push(originalArr[randomIndex])
             originalArr.splice(randomIndex,1)
         } 
-        console.log(newArr)
         return newArr  
     }
     

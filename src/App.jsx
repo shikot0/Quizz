@@ -38,11 +38,7 @@ function App() {
           <Link to="/" className="nav-link">Quiz</Link>
           <Link to="questions" className="nav-link">List of Questions</Link>
         </nav>
-        <button className="nav-button" onClick={() => setNavBarIsVisible(prev => !prev)}>
-          {/* <img src={`${process.env.PUBLIC_URL}/logo-menu.svg`} alt="menu-button" /> */}
-          {/* <img src="./logo-menu" alt="logo" /> */}
-          Menu
-        </button>
+        <button className="nav-button" onClick={() => setNavBarIsVisible(prev => !prev)} aria-label="Menu Button"></button>
         <button className="theme-button" onClick={handleTheme}>Change theme</button>
         <Routes>
           <Route exact path="/" element={<QuizPage/>}/>
